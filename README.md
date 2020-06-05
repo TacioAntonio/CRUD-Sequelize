@@ -1,8 +1,6 @@
 # CRUD with MySQL
 > A simple CRUD made with MySQL
 
-[badge:travis] [badge:coveralls]
-
 ### Installation
 ```sh
 $ git clone https://github.com/TacioAntonio/CRUD-MySQL
