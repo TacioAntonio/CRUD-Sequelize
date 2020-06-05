@@ -1,10 +1,7 @@
 /* eslint-disable no-undef */
 const Sequelize = require('sequelize');
 const chalk = require('chalk');
-const sequelize = new Sequelize('teste', 'root', '123', {
-  host: 'localhost',
-  dialect: 'mysql'
-});
+const sequelize = new Sequelize(process.env.URI);
 
 sequelize
     .authenticate()
