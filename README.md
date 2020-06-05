@@ -14,13 +14,13 @@ $ npm start
 ### Endpoints
 #### Show users
 Returns json data about a single user.
-**URL**
+- **URL**
 /users
-**Method**
+- **Method**
 GET
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```json
 [
     {
@@ -46,25 +46,25 @@ _**Content:**_
       }
     ]
 ```
-**Error response**
-_**Code:**_ 400 Invalid request
-_**Content:**_
+- **Error response**
+  - _**Code:**_ 400 Invalid request
+  - _**Content:**_
 ```js
 { success: false, message: 'Collect users fail', statusCode: 400 }
 ```
 
 #### Show user
 Returns json data about a single user.
-**URL**
+- **URL**
 /users/:id
-**Method**
+- **Method**
 GET
-**URL Params**
-_**Required:**_
-id=[int]
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **URL Params**
+  - _**Required:**_
+  id=[int]
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```json
 {
   "id": 1,
@@ -74,20 +74,20 @@ _**Content:**_
   "updatedAt": "2020-06-03T00:13:08.000Z"
 }
 ```
-**Error response**
-_**Code:**_ 400 Invalid request
-_**Content:**_
+- **Error response**
+  - _**Code:**_ 400 Invalid request
+  - _**Content:**_
 ```js
 { success: false, message: 'Collect users fail', statusCode: 400 }
 ```
 
 #### Insert user
 Insert data about a single user.
-**URL**
+- **URL**
 /users
-**Method**
+- **Method**
 POST
-**Data params**
+- **Data params**
 ```json
 {
     "username": "Maria",
@@ -95,15 +95,15 @@ POST
     "password": "1234589-200x122"
 }
 ```
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```js
 { success: true, message: 'The user has been successfully inserted.', statusCode: 200 }
 ```
-**Error response**
-_**Code:**_ 400 Invalid request
-_**Content:**_
+- **Error response**
+  - _**Code:**_ 400 Invalid request
+  - _**Content:**_
 ```js
 { success: false, message: 'User already exists.', statusCode: 400 }
 ```
@@ -114,29 +114,29 @@ OR
 
 #### Update user
 Update data of a single user.
-**URL**
+- **URL**
 /users/:id
-**Method**
+- **Method**
 PUT
-**URL Params**
-_**Required:**_
-id=[int]
-**Data params**
+- **URL Params**
+  - _**Required:**_
+  id=[int]
+- **Data params**
 ```json
 {
     "username": "Maria",
     "password": "123458888-200"
 }
 ```
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```js
 { success: true, message: 'Update successfully.', statusCode: 200 }
 ```
-**Error response**
-_**Code:**_ 400 Invalid request
-_**Content:**_
+- **Error response**
+  - _**Code:**_ 400 Invalid request
+  - _**Content:**_
 ```js
 { success: false, message: 'User does not exists.', statusCode: 400 }
 ```
@@ -147,22 +147,22 @@ OR
 
 #### Delete user
 Delete data of a single user.
-**URL**
+- **URL**
 /users/:id
-**Method**
+- **Method**
 DELETE
-**URL Params**
-_**Required:**_
-id=[int]
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **URL Params**
+  - _**Required:**_
+  id=[int]
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```js
 { success: true, message: 'User deleted.', statusCode: 200 }
 ```
-**Error response**
-_**Code:**_ 400 Invalid request
-_**Content:**_
+- **Error response**
+  - _**Code:**_ 400 Invalid request
+  - _**Content:**_
 ```js
 { success: false, message: 'User does not exists.', statusCode: 400 }
 ```
@@ -173,20 +173,20 @@ OR
 
 #### Login
 Generate token for a user.
-**URL**
+- **URL**
 /login
-**Method**
+- **Method**
 POST
-**Data params**
+- **Data params**
 ```json
 {
   "email": "maria@gmail.com",
   "password": "123458888-200"
 }
 ```
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```js
 {
   "auth": true,
@@ -194,9 +194,9 @@ _**Content:**_
   "statusCode": 200
 }
 ```
-**Error response**
-_**Code:**_ 400 Invalid request
-_**Content:**_
+- **Error response**
+  - _**Code:**_ 400 Invalid request
+  - _**Content:**_
 ```js
 { success: false, message: 'Invalid email or password.', statusCode: 400 }
 ```
@@ -215,39 +215,39 @@ OR
 
 #### Logout
 Close the connection.
-**URL**
+- **URL**
 /logout
-**Method**
+- **Method**
 DELETE
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```js
 { auth: false, token: null, statusCode: 200 }
 ```
 
 #### Send email
 Contact email.
-**URL**
+- **URL**
 /contact
-**Method**
+- **Method**
 POST
-**Data params**
+- **Data params**
 ```json
 {
   "subject": "Assunto",
   "text": "Oi"
 }
 ```
-**Success response**
-_**Code:**_ 200 Success
-_**Content:**_
+- **Success response**
+  - _**Code:**_ 200 Success
+  - _**Content:**_
 ```js
 { success: true, message: "The email was sent successfully.", statusCode: 200 }
 ```
-**Error response**
-_**Code:**_ 400 Invalid request
-_**Content:**_
+- **Error response**
+  - _**Code:**_ 400 Invalid request
+  - _**Content:**_
 ```js
 { success: false, message: 'Email error.', statusCode: 400 }
 ```
@@ -265,11 +265,11 @@ OR
 ```
 
 ### Running the tests
-**Running tests**
+- **Running tests**
 ```sh
 $ npm run test
 ```
-**Code coverage**
+- **Code coverage**
 ```sh
 $ npm run coverage
 ```
