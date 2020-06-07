@@ -3,8 +3,8 @@
 
 ### Installation
 ```sh
-$ git clone https://github.com/TacioAntonio/CRUD-MySQL
-$ cd CRUD-MySQL
+$ git clone https://github.com/TacioAntonio/CRUD-Sequelize
+$ cd CRUD-Sequelize
 $ npm i
 $ npm start
 ```
