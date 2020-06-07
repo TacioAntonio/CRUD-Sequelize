@@ -1,5 +1,5 @@
-# CRUD with MySQL
-> A simple CRUD made with MySQL
+# CRUD with Sequelize
+> A simple CRUD made with Sequelize
 
 ### Installation
 ```sh
